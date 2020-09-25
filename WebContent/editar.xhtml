@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+<h:head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+
+	
+	
+	<title>Agenda</title>
+</h:head>
+	 
+<h:body>
+	
+	<nav class="navbar" style="background-color: #636363; height: 70px" >
+  		<a class="navbar-brand" style="color: white" href="#">Alterar Contatos</a>
+	</nav><br/>
+	
+	<h:form id="formContato">
+	
+	<p:messages id="messages" />
+	
+	<div class="container" style="float: left">
+  				<div class="row">
+    				<div class="col-4">
+    					<div class="p-field p-col">
+            				<p:outputLabel for="nome" value="Nome" /><br/>
+            				<p:inputText id="nome" value="#{contatoBean.contato.nome}" />
+        				</div>
+    				</div>
+    				<div class="col-4">
+    					<div class="p-field p-col">
+            				<p:outputLabel for="sobrenome" value="Sobrenome" /><br/>
+            				<p:inputText id="sobrenome" value="#{contatoBean.contato.sobrenome}" />
+        				</div>		
+    				</div>
+  				</div>
+  				<div class="row">
+    				<div class="col-4">
+    					<div class="p-field p-col">
+            				<p:outputLabel for="telefone" value="Telefone" /><br/>
+            				<p:inputText id="telefone" value="#{contatoBean.contato.telefone}" />
+        				</div>
+    				</div>
+    				<div class="col-4">
+    					<div class="p-field p-col">
+            				<p:outputLabel for="email" value="Email" /><br/>
+            				<p:inputText id="email" value="#{contatoBean.contato.email}" />
+        				</div>		
+    				</div>
+  				</div>
+			</div>
+	
+	</h:form>
+		
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
+</h:body>
+
+</html>
