@@ -48,8 +48,10 @@ public class ContatoBean {
 		return "";
 	}
 	
-	public void encontrarContatoPorId(Contato contato) throws IOException {
+	public void alterarContato(Contato contato) throws IOException {
 		this.contato = dao.finById(contato);
+		contato = new Contato();
+		carregarContatos();
 	}
 	
 	

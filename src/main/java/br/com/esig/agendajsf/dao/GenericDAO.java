@@ -26,20 +26,8 @@ public class GenericDAO<T> {
 		transaction = entityManager.getTransaction();
 	}
 	
-	//Função para salvar uma entidade no banco
-	public void save(T entity) { 
-		loadDAO();
-		transaction.begin(); //inicia uma transação do banco
-		
-	    entityManager.persist(entity); //realiza a persistência
-		
-		transaction.commit(); //commita a transação
-		entityManager.close(); //e encerra o gerenciador do JPA
-	
-	}
-	
-	//Função para alterar uma entidade já cadastrada no banco
-	public T update(T entity) { 
+	//Função para salvar uma entidade e caso já esteja salva, atualiza ela
+	public T save(T entity) { 
 		loadDAO();
 		transaction.begin();
 		

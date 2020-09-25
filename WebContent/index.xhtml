@@ -38,46 +38,43 @@
 			</svg>
   		</a>
 	</p>
-  			<div class="container" style="float: left">
-  				<div class="row">
-    				<div class="col-4">
-    					<div class="p-field p-col">
-            				<p:outputLabel for="nome" value="Nome" /><br/>
-            				<p:inputText id="nome" value="#{contatoBean.contato.nome}" />
-        				</div>
-    				</div>
-    				<div class="col-4">
-    					<div class="p-field p-col">
-            				<p:outputLabel for="sobrenome" value="Sobrenome" /><br/>
-            				<p:inputText id="sobrenome" value="#{contatoBean.contato.sobrenome}" />
-        				</div>		
-    				</div>
-  				</div>
-  				<div class="row">
-    				<div class="col-4">
-    					<div class="p-field p-col">
-            				<p:outputLabel for="telefone" value="Telefone" /><br/>
-            				<p:inputText id="telefone" type="number" value="#{contatoBean.contato.telefone}" />
-        				</div>
-    				</div>
-    				<div class="col-4">
-    					<div class="p-field p-col">
-            				<p:outputLabel for="email" value="Email" /><br/>
-            				<p:inputText id="email" value="#{contatoBean.contato.email}" />
-        				</div>		
-    				</div>
-  				</div>
+  	
+  	<div class="container" style="float: left">
+  		<div class="row">
+   			<div class="col-4">
+    			<div class="p-field p-col">
+            		<p:outputLabel for="nome" value="Nome" /><br/>
+         			<p:inputText id="nome" value="#{contatoBean.contato.nome}" />
+        		</div>
+   			</div>
+   			<div class="col-4">
+    			<div class="p-field p-col">
+           			<p:outputLabel for="sobrenome" value="Sobrenome" /><br/>
+            		<p:inputText id="sobrenome" value="#{contatoBean.contato.sobrenome}" />
+        		</div>		
+    		</div>
+ 		</div>
+  		<div class="row">
+    		<div class="col-4">
+    			<div class="p-field p-col">
+            		<p:outputLabel for="telefone" value="Telefone" /><br/>
+            		<p:inputText id="telefone" type="number" value="#{contatoBean.contato.telefone}" />
+        		</div>
+    		</div>
+    		<div class="col-4">
+    			<div class="p-field p-col">
+          			<p:outputLabel for="email" value="Email" /><br/>
+            		<p:inputText id="email" value="#{contatoBean.contato.email}" />
+        		</div>		
+    		</div>
+  		</div>
   				
-  				<h:commandButton styleClass="btn" style="margin-bottom: 2%; margin-top: 2%; background-color: #37A44D; color: white" value="Salvar" action="#{contatoBean.salvar}"/>
-  				
-  				
-			</div>
-	
+  		<h:commandButton styleClass="btn" style="margin-bottom: 2%; margin-top: 2%; background-color: #37A44D; color: white" value="Salvar" action="#{contatoBean.salvar}"/>
+  							
+	</div>
 	</h:form>
 	<br/>
 	<br/>
-			
-			
 			
 	<div class="container" style="margin-left: 1%"><h5>Lista de Contatos</h5></div>
 			
@@ -98,7 +95,7 @@
         	<h:outputText value="#{contato.email}" />
     	</p:column>
     	<p:column headerText="Editar" style="text-align: center">
-    		<p:commandButton style="background-color: #C4BD51; border-color: #C4BD51" icon="ui-icon-pencil" action="#{contatoBean.encontrarContatoPorId(contato)}"></p:commandButton>
+    		<p:commandButton style="background-color: #C4BD51; border-color: #C4BD51" icon="ui-icon-pencil" action="#{contatoBean.alterarContato(contato)}"></p:commandButton>
     	</p:column>
     	<p:column headerText="Remover" style="text-align: center">
     		<p:commandButton style="background-color: #A03640; border-color: #A03640" icon="ui-icon-close" action="#{contatoBean.remover(contato)}" onclick="confirm('Você tem certeza?')"></p:commandButton>
